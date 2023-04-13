@@ -26,8 +26,8 @@ const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
     <div className="app">
-      <ListHeader listName={'name of a todo'} />
-      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} />)}
+      <ListHeader listName={'name of a todo'} getData={getData}/>
+      {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
     </div>
   );
 }
