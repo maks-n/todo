@@ -10,23 +10,23 @@ const Modal = ({ mode, setShowModal, getData, task }) => {
     date: editMode ? "" : new Date()
   })
 
-    const postData = async (e) => {
-      e.preventDefault();
-      try {
-        const response = await fetch('http://localhost:8000/todos', {
-          method: "POST",
-          headers: {'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        })
-        if (response.status === 200) {
-          console.log('WORKED');
-          setShowModal(false);
-          getData();
-        }
-      } catch(err) {
-        console.error(err);
+  const postData = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch('http://localhost:8000/todos', {
+        method: "POST",
+        headers: {'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      if (response.status === 200) {
+        console.log('WORKED');
+        setShowModal(false);
+        getData();
       }
+    } catch(err) {
+      console.error(err);
     }
+  }
 
   const handleChange = (e) => {
     console.log('changing!', e);
