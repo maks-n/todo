@@ -26,8 +26,6 @@ useEffect(() => {
   }
 }, [])
 
-console.log(tasks);
-
 // sort by date
 const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date));
 
