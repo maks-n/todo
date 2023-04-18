@@ -37,9 +37,13 @@ const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date));
       {authToken &&
         <>
         <ListHeader listName={'name of a todo'} getData={getData}/>
+        <p className='user-email'>Welcome, {userEmail}</p>
         {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
         </>
       }
+      <p className='copyright'>
+        © maks-n
+      </p>
     </div>
   );
 }
