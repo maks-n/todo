@@ -10,7 +10,7 @@ const Auth = () => {
   }
  
   return (
-    <div className="auth-conteiner">
+    <div className="auth-container">
       <div className="auth-container-box">
         <form>
           <h2>{isLogIn ? 'Please, log in' : 'Please, sign up'}</h2>
@@ -20,7 +20,7 @@ const Auth = () => {
           <input type="submit" className="create"/>
           {error && <p>{error}</p>}
         </form>
-        <div className='auth-options'>
+        <div className="auth-options">
           <button 
             onClick={() => viewLogin(false)}
             style={{backgroundColor : !isLogIn ? 'rgb(255, 255, 255)' : 'rgb(188, 188, 188)'}}
