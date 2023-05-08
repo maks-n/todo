@@ -102,9 +102,4 @@ app.post('/login', async (req, res) => {
   }
 })
 
-app.get('/', (req, res) => {
-  res.send('hello!');
-});
-
-
 app.listen(PORT, () => console.log(`Server running on PORT ${PORT}`));
