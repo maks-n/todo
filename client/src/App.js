@@ -1,7 +1,7 @@
 import ListHeader from './components/ListHeader';
-import ListItem from './components/ListItem'
-import Auth from './components/Auth'
-import { useEffect, useState } from 'react'
+import ListItem from './components/ListItem';
+import Auth from './components/Auth';
+import { useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
 
 const App = () => {
@@ -34,13 +34,13 @@ const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date));
       {!authToken && <Auth/>}
       {authToken &&
         <>
-        <ListHeader listName={'name of a todo'} getData={getData}/>
+        <ListHeader listName={'Let\'s TODO it!'} getData={getData}/>
         <p className='user-email'>Welcome, {userEmail}</p>
         {sortedTasks?.map((task) => <ListItem key={task.id} task={task} getData={getData}/>)}
         </>
       }
       <p className='copyright'>
-        © maks-n
+        © <a href="https://github.com/maks-n">maks-n</a>
       </p>
     </div>
   );

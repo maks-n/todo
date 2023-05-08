@@ -198,12 +198,17 @@ input {
 .copyright {
   font-size: 13px;
   margin: 10px;
-  color: rgb(114, 114, 144);
+  color: rgb(126, 126, 163);
+}
+
+.copyright a {
+  color: rgb(126, 126, 163);
+  text-decoration: none;
 }
 
 .user-email {
   float: right;
   font-size: 13px;
   margin: 10px;
-  color: rgb(114, 114, 144);
+  color: rgb(126, 126, 163);
 }
