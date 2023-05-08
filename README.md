@@ -48,4 +48,5 @@ PostgreSQL used as a Data Base.
 6. Multi todo lists support.
 7. Changing password.
 8. Strong password requirement.
+9. Dark mode.
 
