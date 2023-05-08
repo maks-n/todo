@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(233, 241, 249);
+  background-color: rgb(220, 234, 248);
   display: flex;
   justify-content: center; 
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .app {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(246, 245, 241);
   box-shadow: rgba(0,0,0, 0.05) 0 6px 24px, rgba(0,0,0, 0.08) 0 0 0 1px;
   border-radius: 10px;
   padding: 10px;
@@ -30,65 +30,64 @@ body {
 }
 
 .edit {
-  border: 1.5px solid rgb(141, 181, 145);
-  color: rgb(141, 181, 145);
+  border: 1.5px solid rgb(235, 183, 93);
+  color: rgb(235, 183, 93);
   text-transform: uppercase;
 }
 
 .edit:hover {
-  background-color: rgb(181, 223, 186);
+  background-color: rgb(250, 228, 190);
 }
 
 .edit:active {
   color: rgb(255, 255, 255);
-  background-color: rgb(141, 181, 145);
+  background-color: rgb(235, 183, 93);
 }
 
 .delete {
-  border: 1.5px solid rgb(255, 175, 163);
-  color: rgb(255, 175, 163);
+  border: 1.5px solid rgb(249, 126, 126);
+  color: rgb(249, 126, 126);
   text-transform: uppercase;
 }
 
 .delete:hover {
-  background-color: rgb(255, 201, 193);
+  background-color: rgb(255, 193, 193);
 }
 
 .delete:active {
-  background-color: rgb(255, 175, 163);
+  background-color: rgb(249, 126, 126);
   color: rgb(255, 255, 255);
 }
 
 .create {
-  border: 1.5px solid rgb(108, 115, 148);
-  color: rgb(108, 115, 148);
+  border: 1.5px solid rgb(110, 194, 71);
+  color: rgb(110, 194, 71);
   text-transform: uppercase;
 }
 
 .create:hover {
-  background-color: rgb(131, 138, 172);
+  background-color: rgb(191, 227, 195);
 }
 
 .create:active {
-  background-color: rgb(108, 115, 148);
+  background-color: rgb(110, 194, 71);
   color: rgb(255, 255, 255);
 }
 
 .signout {
-  border: 1.5px solid rgb(255, 175, 163);
-  background-color: rgb(255, 175, 163) !important;
+  border: 1.5px solid rgb(0, 0, 0);
+  background-color: rgb(139, 139, 139) !important;
   color: rgb(234, 234, 234);
 }
 
 .signout:hover {
-  background-color: rgb(175, 94, 94) !important;
-  border: 1.5px solid rgb(175, 94, 94);
+  background-color: rgb(0, 0, 0) !important;
+  border: 1.5px solid rgb(0, 0, 0);
 }
 
 .signout:active {
-  border: 1.5px solid rgb(175, 81, 81) !important;
-  background-color: rgb(175, 81, 81) !important;
-  color: rgb(255, 255, 255);
+  border: 1.5px solid rgb(139, 139, 139) !important;
+  background-color: rgb(139, 139, 139) !important;
 }
 
 input {
