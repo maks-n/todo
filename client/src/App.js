@@ -20,14 +20,14 @@ const App = () => {
     }  
   }
 
-useEffect(() => {
-  if (authToken) {
-    getData();
-  }
-}, [])
+  useEffect(() => {
+    if (authToken) {
+      getData();
+    }
+  }, [])
 
-// sort by date
-const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date));
+  // sort by date
+  const sortedTasks = tasks?.sort((a, b) => new Date(a.date) - new Date(b.date));
 
   return (
     <div className="app">
