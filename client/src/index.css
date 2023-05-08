@@ -120,13 +120,6 @@ input {
   padding: 10px;
 }
 
-.tick path{
-  fill: none;
-  stroke: #000;
-  stroke-miterlimit: 10;
-  stroke-width: 32px;
-}
-
 /* Modal */
 .overlay {
   position: absolute;

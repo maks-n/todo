@@ -24,12 +24,12 @@ app.get('/todos/:userEmail', async(req, res) => {
 
 // create a new todo
 app.post('/todos', async(req, res) => {
-  const { user_email, title, progress, date } = req.body;
-  console.log(user_email, title, progress, date)
+  const { user_email, title, date } = req.body;
+  console.log(user_email, title, date);
   const id = uuidv4();
   try {
-    const newToDo = await pool.query(`INSERT INTO todos(id, user_email, title, progress, date) VALUES($1, $2, $3, $4, $5)`, 
-    [id, user_email, title, progress, date])
+    const newToDo = await pool.query(`INSERT INTO todos(id, user_email, title, date) VALUES($1, $2, $3, $4)`, 
+    [id, user_email, title, date])
     res.json(newToDo);
   } catch (err) {
     console.error(err);
@@ -39,9 +39,9 @@ app.post('/todos', async(req, res) => {
 // edit a todo
 app.put('/todos/:id', async (req, res) => {
   const { id } = req.params;
-  const {user_email, title, progress, date } = req.body;
+  const {user_email, title, date } = req.body;
   try {
-    const editToDo = await pool.query('UPDATE todos SET user_email = $1, title = $2, progress = $3, date = $4 WHERE id = $5;', [user_email, title, progress, date, id]);
+    const editToDo = await pool.query('UPDATE todos SET user_email = $1, title = $2, date = $3 WHERE id = $4;', [user_email, title, date, id]);
     res.json(editToDo);
   } catch (err) {
     console.error(err);
@@ -55,7 +55,7 @@ app.delete('/todos/:id', async (req, res) => {
     const deleteToDo = await pool.query('DELETE FROM todos WHERE id = $1;', [id]);
     res.json(deleteToDo);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 })
 
